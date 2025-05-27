@@ -264,7 +264,10 @@ select:focus {
     background-color: white;
 }
 
-.hero2, .hero3, .hero4{
+.hero2,
+.hero3,
+.hero4,
+footer {
     margin-top: 28px;
     padding: 0 4.5rem;
 }
@@ -323,7 +326,7 @@ ul.trendingMoviesArea {
 }
 
 .reasonArea {
-        position: relative;
+    position: relative;
 
     margin-block: 1.3rem;
     gap: 1.2rem;
@@ -331,28 +334,28 @@ ul.trendingMoviesArea {
     box-sizing: border-box;
 }
 
-h3.heading{
+h3.heading {
     margin-block: 0;
     font-weight: 500;
     font-size: 1.125rem;
 
 }
 
-.text-content p{
+.text-content p {
     font-weight: 400;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.svg-image{
+.svg-image {
     align-items: flex-end;
 }
 
 
-.reason-wrapper .img-content{
+.reason-wrapper .img-content {
     justify-content: flex-end;
     -webkit-box-align: center;
-    align-items:flex-end
+    align-items: flex-end
 }
 
 .svg-image svg {
@@ -360,13 +363,13 @@ h3.heading{
     height: 3rem;
 }
 
-li.faqbox{
+li.faqbox {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-li.faqbox h3{
+li.faqbox h3 {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -376,18 +379,19 @@ li.faqbox h3{
     backdrop-filter: blur(12px);
 }
 
-.faq-question:hover{
+.faq-question:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
-}   
+}
 
 .faq-icon {
     transition: transform 0.3s ease;
     min-width: 24px;
-    min-height: 24px;}
+    min-height: 24px;
+}
 
 
-li.faqbox h3 button{
+li.faqbox h3 button {
     width: 100%;
     padding: 1.2rem;
     color: #ffffff;
@@ -410,7 +414,7 @@ li.faqbox h3 button{
 
 }
 
-.faq-answer{
+.faq-answer {
     border: 2px solid rgba(255, 255, 255, 0.04);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
@@ -429,23 +433,63 @@ li.faqbox h3 button{
 
 }
 
-.faq-answer p{
+.faq-answer p {
     margin-block: 0;
     text-align: left;
 }
 
-.faq-answer p:first-child{
+.faq-answer p:first-child {
     margin-bottom: 0.8rem;
 }
 
-.faq-answer p:last-child{
+.faq-answer p:last-child {
     margin-top: 0.8rem;
 }
 
-.faq-answer p:last-child::before{
+.faq-answer p:last-child::before {
     content: "";
 }
-    
+
+.footer-wrapper {
+    max-width: 980px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links-top {
+    margin-bottom: 1.5rem;
+}
+
+.footer-links-top p {
+    font-size: 1rem;
+}
+
+.footer-links-top a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links {
+    margin-bottom: 1.5rem;
+}
+
+.footer-links-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.footer-links-list li a:hover {
+    text-decoration: underline;
+}
 
 /* Media Queries */
 @media screen and (max-width: 960px) {
@@ -479,7 +523,10 @@ li.faqbox h3 button{
         font-weight: 500;
     }
 
-    .hero2, .hero3, .hero4 {
+    .hero2,
+    .hero3,
+    .hero4,
+    footer {
         padding: 0 0rem;
     }
 
@@ -492,7 +539,7 @@ li.faqbox h3 button{
         margin-top: 1rem;
     }
 
-    .reason-wrapper .img-content{
+    .reason-wrapper .img-content {
         align-items: flex-start;
         /* justify-content: flex-end; */
     }
@@ -508,15 +555,15 @@ li.faqbox h3 button{
         height: 4rem;
     }
 
-        h3.heading{
-    font-weight: 500;
-    font-size: 1rem;
+    h3.heading {
+        font-weight: 500;
+        font-size: 1rem;
 
-}
+    }
 
-.text-content p{
-    font-size: 0.875rem;
-}
+    .text-content p {
+        font-size: 0.875rem;
+    }
 
 }
 
@@ -537,21 +584,24 @@ li.faqbox h3 button{
         max-width: 90%;
     }
 
-    .hero2, .hero3, .hero4 {
+    .hero2,
+    .hero3,
+    .hero4,
+    footer {
         padding: 0 0rem;
     }
 
-        h3.heading{
-    font-weight: 500;
-    font-size: 1rem;
+    h3.heading {
+        font-weight: 500;
+        font-size: 1rem;
 
-}
+    }
 
-.text-content p{
-    font-size: 0.875rem;
-}
+    .text-content p {
+        font-size: 0.875rem;
+    }
 
-    .reason-wrapper .img-content{
+    .reason-wrapper .img-content {
         align-items: flex-end;
         justify-content: flex-end;
 
@@ -560,18 +610,22 @@ li.faqbox h3 button{
 }
 
 @media screen and (max-width: 480px) {
-    .hero2, .hero3, .hero4 {
+
+    .hero2,
+    .hero3,
+    .hero4,
+    footer {
         padding: 0 0rem;
     }
 
-    h3.heading{
-    font-weight: 500;
-    font-size: 1rem;
+    h3.heading {
+        font-weight: 500;
+        font-size: 1rem;
 
-}
+    }
 
-.text-content p{
-    font-size: 0.875rem;
-}
+    .text-content p {
+        font-size: 0.875rem;
+    }
 
 }
