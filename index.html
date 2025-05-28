@@ -49,8 +49,10 @@
                             <p>Ready to watch? Enter your email to create or restart your membership.</p>
                             <div class="email-signup">
                                 <div class="email-form">
+                                    <div class="input-wrapper">
                                     <input type="email" placeholder="Email address" required>
                                     <button class="get-started-btn">Get Started ></button>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -811,7 +813,17 @@
     </main>
 
     <footer>
-        <div class="footer-wrapper">
+        <div class="footer-wrapper column-flex" style="gap: 1.2rem;">
+            <div class="footer-top-mail">
+                 <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                            <div class="email-signup">
+                                <div class="email-form">
+                                    <label for="email" dir="ltr">Email Address</label>
+                                    <input type="email" dir="ltr" autocomplete="email" minlength="5" maxlength="50" id="email" name="email" required>
+                                    <button class="get-started-btn">Get Started ></button>
+                                </div>
+                            </div>
+            </div>
             <div class="footer-links-top">
                 <p>Questions? Call <a href="tel:000-800-919-1694">000-800-919-1694</a></p>
             </div>
@@ -836,6 +848,33 @@
                 </ul>
 
             </div>
+
+            <div class="footer-bottom-language">
+                <div class="footer-select-wrapper unfilled-button flex align-center justify-center">
+                    <div>
+                        <img src="Images/lang.svg" alt="lang-icon" class="lang-icon">
+                    </div>
+                    <select class="language">
+                        <option lang="en" label="English" value="en-IN" selected>English</option>
+                        <option lang="hi" label="हिन्दी" value="hi-IN">हिन्दी</option>
+                    </select>
+                    <div class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 16 16" width="16"
+                            height="16" data-icon="CaretDownSmall" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M11.5976 6.5C11.7461 6.5 11.8204 6.67956 11.7154 6.78457L8.23574 10.2643C8.10555 10.3945 7.89445 10.3945 7.76425 10.2643L4.28457 6.78457C4.17956 6.67956 4.25393 6.5 4.40244 6.5H11.5976Z"
+                                clip-rule="evenodd" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom-country">
+                <p style="font-size: 0.95rem;">Netflix India</p>
+            </div>
+
         </div>
     </footer>
     <script src="script.js"></script>

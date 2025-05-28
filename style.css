@@ -186,14 +186,28 @@ select:focus {
 .email-form {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    max-width: 600px;
+    gap: 0.7rem;
+    max-width: 700px;
     margin: 0 auto;
+    position: relative;
+}
+
+.email-form label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 2;
 }
 
 .email-form input {
-    flex: 1;
-    padding: 1.5rem 1rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
     border: 1px solid #8c8c8c;
     border-radius: 2.2rem;
@@ -201,12 +215,35 @@ select:focus {
     color: white;
 }
 
+.email-form label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+.email-form input:focus + label,
+.email-form input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 1rem;
+    font-size: 0.8rem;
+    background-color: #474646;
+    padding: 0 0.3rem;
+    transform: translateY(-50%);
+}
+
 .get-started-btn {
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background-color: var(--netflix-red);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 1.7rem;
     font-size: 1.5rem;
     cursor: pointer;
     white-space: nowrap;
@@ -451,12 +488,13 @@ li.faqbox h3 button {
 }
 
 .footer-wrapper {
-    max-width: 980px;
+    width: 100%;
+    /* max-width: 980px; */
     color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-links-top {
-    margin-bottom: 1.5rem;
+.footer-top-mail{
+    text-align: center;
 }
 
 .footer-links-top p {
@@ -491,6 +529,70 @@ li.faqbox h3 button {
     text-decoration: underline;
 }
 
+footer .unfilled-button{
+    width: 8.28rem;
+    height: 2rem;
+}
+
+.footer-top-mail .email-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-top-mail .input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.footer-top-mail .email-form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #8c8c8c;
+    border-radius: 2.2rem;
+    background-color: #474646;
+    color: white;
+    position: relative;
+}
+
+.footer-top-mail .email-form label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+.footer-top-mail .email-form input:focus + label,
+.footer-top-mail .email-form input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 1rem;
+    font-size: 0.8rem;
+    background-color: #474646;
+    padding: 0 0.3rem;
+    transform: translateY(-50%);
+}
+
+.footer-top-mail .get-started-btn {
+    padding: 0.8rem 2rem;
+    background-color: var(--netflix-red);
+    color: white;
+    border: none;
+    border-radius: 1.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
 /* Media Queries */
 @media screen and (max-width: 960px) {
     .brand-img {
@@ -510,13 +612,6 @@ li.faqbox h3 button {
         font-size: 2rem;
     }
 
-    .email-form {
-        flex-direction: column;
-    }
-
-    .get-started-btn {
-        width: 100%;
-    }
 
     span.heading {
         font-size: 1.25rem;
@@ -591,10 +686,44 @@ li.faqbox h3 button {
         padding: 0 0rem;
     }
 
+    .email-form {
+        flex-direction: column;
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .email-form input,
+    .get-started-btn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.2rem 1rem 0.5rem;
+    }
+
+    .email-form label {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .email-form input:focus + label,
+    .email-form input:not(:placeholder-shown) + label {
+        top: 0.5rem;
+        left: 1rem;
+        font-size: 0.8rem;
+        background-color: #474646;
+        padding: 0 0.3rem;
+        transform: none;
+    }
+
+    .get-started-btn {
+        width: 100%;
+    }
+
     h3.heading {
         font-weight: 500;
         font-size: 1rem;
-
     }
 
     .text-content p {
@@ -604,7 +733,43 @@ li.faqbox h3 button {
     .reason-wrapper .img-content {
         align-items: flex-end;
         justify-content: flex-end;
+    }
 
+    .footer-top-mail .email-form {
+        flex-direction: column;
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .footer-top-mail .email-form input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.2rem 1rem 0.5rem;
+        position: relative;
+    }
+
+    .footer-top-mail .email-form label {
+        position: absolute;
+        top: 1.2rem;
+        left: 1rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        pointer-events: none;
+        transition: all 0.2s ease;
+        z-index: 2;
+    }
+
+    .footer-top-mail .email-form input:focus + label,
+    .footer-top-mail .email-form input:not(:placeholder-shown) + label {
+        top: 0.5rem;
+        left: 1rem;
+        font-size: 0.8rem;
+        background-color: #474646;
+        padding: 0 0.3rem;
+    }
+
+    .footer-top-mail .get-started-btn {
+        width: 100%;
     }
 
 }
